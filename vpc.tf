@@ -12,7 +12,7 @@ resource "aws_internet_gateway" "my-vpc-igw" {
 
 resource "aws_subnet" "my-vpc-public-subnet" {
     vpc_id = aws_vpc.my-vpc.id
-    availability_zone = Var.Az
+    availability_zone = var.Az
     cidr_block = var.public
     map_public_ip_on_launch = true
   
